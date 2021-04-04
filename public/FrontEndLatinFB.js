@@ -1,17 +1,4 @@
-//keys are the name of the greek person
 
-/*express is a server that handles communication with the database (firbase)
-
-app communicates with server, then server communicates with database
-
-user uploads text then the program parses xml so it knows what to put in the database. express
-reads that and puts it in the database
-
-POST, GET, and SEND are critical to web development
-
-JS has a DOM parser with which I can parse XML
-
-*/
 
 fetch('cic.n.d_lat.xml')
 .then(function(response) { //response is the result of fetch and response is a promise
