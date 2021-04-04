@@ -1,0 +1,28 @@
+<head>
+	<title>Welcome to Togas and Gyros!</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+<header>Welcome to Togas and Gyros, a platform for sharing your travels across
+Ancient Lands and chat with fellow adventurers!</header>
+<script>
+fetch('cic.n.d_lat.xml')
+.then(function(response) { //response is the result of fetch and response is a promise
+    return response.text()
+}
+
+).then(function(response) { //this is a callback function and it gets called with my text file
+    //its response contains my text, so we feed the response to the parser
+    const parser = new DOMParser(); //DOMParser is a singleton function; you don't give it things
+    const doc1 = parser.parseFromString(response, "application/xml");
+    const div1 = doc1.getElementsByTagName("div1");//everything in the 
+   for(let item of div1) {
+        document.body.append(item);
+   }
+
+});
+</script>
+
+</body>
